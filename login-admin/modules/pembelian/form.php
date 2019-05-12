@@ -67,7 +67,7 @@ if ($_GET['form']=='add') { ?>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-2 control-label">Tgl Pembatalan</label>
+              <label class="col-sm-2 control-label">Tgl Pembelian</label>
               <div class="col-sm-5">
                 <input type="date" class="form-control" id="tgl_pembelian"  name="tgl_pembelian" value="<?php echo date('Y-m-d') ?>" readonly required>
               </div>
