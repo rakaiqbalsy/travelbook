@@ -1,0 +1,30 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.bekas-jadi-berkah{
+	width: 100%;
+    height: 400px;
+    background-color: white;
+}
+
+.bjb-truck {
+	width: 350px;
+	height: 320px;
+	margin-left: 70px;
+}
+
+.desc {
+	margin-top: 50px;
+}
+
+.desc a{
+	color :green;
+}
+
+.desc a:hover{
+	display: block;
+    text-decoration: none;
+    color: blue;
+}
