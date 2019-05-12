@@ -29,7 +29,7 @@
                   <a class="nav-item nav-link active" href="#">Reservasi</a>
                   <!-- <a class="nav-item nav-link active" href="#">Bantuan</a> -->
                   <div class="garis"></div>
-                  <a class="nav-item btn tombol" href="daftar.php">Daftar</a>
+                  <a class="nav-item btn tombol" href="modules/daftar/daftar.php">Daftar</a>
                   <a class="nav-item btn tombol1" href="masuk.php">Masuk</a>
                 </div>
               </div>

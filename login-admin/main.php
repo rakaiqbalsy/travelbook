@@ -143,7 +143,7 @@ session_start();
       </div><!-- /.content-wrapper -->
 
       <footer class="main-footer">
-       <!--  <strong>Copyright &copy; 2019 - <a href="Ajeng Citra Puspita">Ajeng Citra Puspita</a>.</strong> -->
+    
       </footer>
     </div><!-- ./wrapper -->
 

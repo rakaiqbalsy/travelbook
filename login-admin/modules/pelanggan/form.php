@@ -24,7 +24,7 @@ if ($_GET['form']=='add') { ?>
           <form role="form" class="form-horizontal" action="modules/pelanggan/proses.php?act=insert" method="POST">
             <div class="box-body">
               <?php  
-              // fungsi untuk membuat id transaksi
+              // fungsi untuk membuat id pelanggan
               $query_id = mysqli_query($mysqli, "SELECT RIGHT(id_pelanggan,6) as kode FROM data_pelanggan
                                                 ORDER BY id_pelanggan DESC LIMIT 1")
                                                 or die('Ada kesalahan pada query tampil id_pelanggan : '.mysqli_error($mysqli));
