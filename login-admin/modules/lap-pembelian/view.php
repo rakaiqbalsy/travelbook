@@ -23,7 +23,7 @@
               <tr>
                 <th class="center">No.</th>
                 <th class="center">ID Pembelian</th>
-                <th class="center">Tgl Transaksi</th>
+                <th class="center">Tanggal Berangkat</th>
                 <th class="center">Nama Pelanggan</th>
                 <th class="center">Jumlah Tiket</th>
                 <th class="center">Subtotal</th>
@@ -35,7 +35,7 @@
             <?php  
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel obat
-            $query = mysqli_query($mysqli, "SELECT id_pembelian,tgl_transaksi,nama_pelanggan,jumlah_tiket,subtotal FROM pembelian JOIN data_pelanggan ON pembelian.id_pelanggan=data_pelanggan.id_pelanggan")
+            $query = mysqli_query($mysqli, "SELECT id_pembelian,tgl_berangkat,nama_pelanggan,jumlah_tiket,subtotal FROM pembelian JOIN data_pelanggan ON pembelian.id_pelanggan=data_pelanggan.id_pelanggan")
                                             or die('Ada kesalahan pada query tampil Data Pembelian: '.mysqli_error($mysqli));
 
             // tampilkan data
@@ -46,7 +46,7 @@
               echo "<tr>
                       <td width='30' class='center'>$no</td>
                       <td width='80' class='center'>$data[id_pembelian]</td>
-                      <td width='180'>$data[tgl_transaksi]</td>
+                      <td width='180'>$data[tgl_berangkat]</td>
                       <td width='180'>$data[nama_pelanggan]</td>
                       <td width='180'>$data[jumlah_tiket]</td>
                       <td width='180'>$data[subtotal]</td>
