@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +17,41 @@
     <title>Travelin.Kuy</title>
   </head>
   <body>
+
+     <?php  
+      // fungsi untuk menampilkan pesan
+      // jika alert = "" (kosong)
+      // tampilkan pesan "" (kosong)
+      if (empty($_GET['alert'])) {
+        echo "";
+      } 
+      // jika alert = 1
+      // tampilkan pesan Gagal "Username atau Password salah, cek kembali Username dan Password Anda"
+      elseif ($_GET['alert'] == 1) {
+        echo "<div class='alert alert-danger alert-dismissable'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                <h4>  <i class='icon fa fa-times-circle'></i> Gagal Login!</h4>
+                Username atau Password salah, cek kembali Username dan Password Anda.
+              </div>";
+      }
+      // jika alert = 2
+      // tampilkan pesan Sukses "Anda telah berhasil logout"
+      elseif ($_GET['alert'] == 2) {
+        echo "<div class='alert alert-success alert-dismissable'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                <h4>  <i class='icon fa fa-check-circle'></i> Sukses!</h4>
+                Anda telah berhasil logout.
+              </div>";
+      }
+
+       elseif ($_GET['alert'] == 3) {
+        echo "<div class='alert alert-success alert-dismissable'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                <h4>  <i class='icon fa fa-check-circle'></i> Sukses!</h4>
+                Telah Daftar.
+              </div>";
+      }
+      ?>
     
     <!-- awal navbar -->
     <header>
@@ -29,8 +68,30 @@
                   <a class="nav-item nav-link active" href="#">Reservasi</a>
                   <!-- <a class="nav-item nav-link active" href="#">Bantuan</a> -->
                   <div class="garis"></div>
-                  <a class="nav-item btn tombol" href="modules/daftar/daftar.php">Daftar</a>
-                  <a class="nav-item btn tombol1" href="masuk.php">Masuk</a>
+
+                  <?php
+                  if (empty($_SESSION['username']) && empty($_SESSION['password'])){?>
+                      <a class="nav-item btn tombol" href="modules/daftar/daftar.php">Daftar</a>
+                      <a class="nav-item btn tombol1" href="masuk.php">Masuk</a>
+                  <?php } 
+                  else {?>
+                  <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                      <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                      <ul class="nav navbar-nav">
+                          <!-- panggil file "navlogout.php" untuk menampilkan logout -->
+                           <?php include "navlogout.php" ?> 
+
+                      </ul>
+                    </div>
+                  </nav>
+
+                <?php } ?>
+                    <!-- <a class="nav-item btn tombol2"> Raka </a> -->
+                  
                 </div>
               </div>
           </div>
@@ -232,6 +293,24 @@
         </div>
       </div>
     </section>
+    //<!-- Modal Logout -->
+                      <div class="modal fade" id="logout">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title"><i class="fa fa-sign-out"> Logout</i></h4>
+                              </div>
+                              <div class="modal-body">
+                                  <p>Apakah Anda yakin ingin logout? </p>
+                              </div>
+                              <div class="modal-footer">
+                                  <a type="button" class="btn btn-danger" href="logout.php">Ya, Logout</a>
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+                              </div>
+                            </div>//<!-- /.modal-content -->
+                        </div>//<!-- /.modal-dialog -->
+                      </div>//<!-- /.modal -->
 
     <!-- footer -->
     <footer>

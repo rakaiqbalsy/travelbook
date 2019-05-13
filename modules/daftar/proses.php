@@ -9,7 +9,7 @@ if ($_GET['act']=='insert') {
 		$id_pelanggan  = mysqli_real_escape_string($mysqli, trim($_POST['id_pelanggan']));
 		$email_pelanggan  = mysqli_real_escape_string($mysqli, trim($_POST['email_pelanggan']));
 		$username_pelanggan  = mysqli_real_escape_string($mysqli, trim($_POST['username_pelanggan']));
-		$password_pelanggan  = mysqli_real_escape_string($mysqli, trim($_POST['password_pelanggan']));
+		$password_pelanggan  = md5(mysqli_real_escape_string($mysqli, trim($_POST['password_pelanggan'])));
 		$nama_pelanggan  = mysqli_real_escape_string($mysqli, trim($_POST['nama_pelanggan']));
         $alamat_pelanggan  = mysqli_real_escape_string($mysqli, trim($_POST['alamat_pelanggan']));
         $nomor_pelanggan = str_replace('.', '', mysqli_real_escape_string($mysqli, trim($_POST['nomor_pelanggan'])));
@@ -21,7 +21,7 @@ if ($_GET['act']=='insert') {
 
          if ($query) {
                 // jika berhasil tampilkan pesan berhasil simpan data
-                header("location: daftar.php");
+                header("location: ../../index.php?alert3");
             }   
 	}
 }
