@@ -1,0 +1,22 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+}
+.daftar{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.pendaftaran{
+   margin-left: 35%;
+}
+.card{
+    padding: 15px;
+}
+.card button{
+    width: 100%;
+}
+a{
+  margin-top: 5px;
+  background-color: green;
+  border-radius: 5px;
+}
