@@ -91,14 +91,14 @@
                 <label for="nomorHp">Nomor Handphone : </label>
                 <input class="form-control" id="nomorHp" type="number" name="nomor_pelanggan" placeholder="nomor handphone">
               </div>
+              <br>
 
-              
               <div class="container-login100-form-btn">
                 <button class="btn btn-success" type="submit" name="simpan" value="simpan">
                   Daftar
                 </button>
               </div>
-
+              <hr>
               
             </form>
             <a href="#"  class="btn btn-primary">Login</a>

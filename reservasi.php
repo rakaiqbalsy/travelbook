@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,15 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Karla|Roboto|Viga" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/perusahaan.css">
-    <title>Travelin.Kuy</title>
+    <link rel="stylesheet" href="css/masuk.css"> 
+    <title>Reservasi Travelin.Kuy</title>
   </head>
   <body>
 
-     <?php  
-      // fungsi untuk menampilkan pesan
-      // jika alert = "" (kosong)
-      // tampilkan pesan "" (kosong)
-      if (empty($_GET['alert'])) {
+<?php
+    session_start();
+    if (empty($_GET['alert'])) {
         echo "";
       } 
       // jika alert = 1
@@ -51,8 +46,8 @@
                 Telah Daftar.
               </div>";
       }
-      ?>
-    
+?>    
+
     <!-- awal navbar -->
     <header>
       <nav class="navbar navbar-expand-md navbar-dark">
@@ -68,30 +63,8 @@
                   <a class="nav-item nav-link active" href="reservasi.php">Reservasi</a>
                   <!-- <a class="nav-item nav-link active" href="#">Bantuan</a> -->
                   <div class="garis"></div>
-
-                  <?php
-                  if (empty($_SESSION['username']) && empty($_SESSION['password'])){?>
-                      <a class="nav-item btn tombol" href="modules/daftar/daftar.php">Daftar</a>
-                      <a class="nav-item btn tombol1" href="masuk.php">Masuk</a>
-                  <?php } 
-                  else {?>
-                  <nav class="navbar navbar-static-top" role="navigation">
-                    <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                      <span class="sr-only">Toggle navigation</span>
-                    </a>
-                    <div class="navbar-custom-menu">
-                      <ul class="nav navbar-nav">
-                          <!-- panggil file "navlogout.php" untuk menampilkan logout -->
-                           <?php include "navlogout.php" ?> 
-
-                      </ul>
-                    </div>
-                  </nav>
-
-                <?php } ?>
-                    <!-- <a class="nav-item btn tombol2"> Raka </a> -->
-                  
+                  <a class="nav-item btn tombol" href="modules/daftar/daftar.php">Daftar</a>
+                  <a class="nav-item btn tombol1" href="masuk.php">Masuk</a>
                 </div>
               </div>
           </div>
@@ -102,10 +75,7 @@
     <!-- jumbotron -->
     <div class="jumbotron jumbotron-fluid">
       <div class="kata">
-          <h2>Eksekutif <span>Travel</span></h2>
-          <p>Nikmati Perjalanan Yang Menyenangkan Bersama Kami</p>
-          <br>
-          <a href="modules/pesan/view.php" class="btn btn-half">Reservasi Sekarang</a>
+          <h2>RESERVASI</h2>
       </div>
     </div>
     <!-- akhir jumbotron -->
@@ -140,85 +110,48 @@
             </div>
           </div>
         </div>
-  
-        <div class="row about">
-          <div class="col-lg-6">
-            <img src="img/travel.jpg" alt="tentang" class="img-fluid">
-          </div>
-          <div class="col-lg-6 tentang">
-              <h2>Travelin</h2>
-              <hr>
-              <p>Merupakan Perusahaan terpecaya sejak tahun 2009, Melayani rute Yogyakarta - Bandung PP.
-                Travelin mementingkan kenyamanan serta kepuasan pelanggan dalam melayani pelanggan sehingga
-                pelanggan mempunyai pengalaman dalam perjalanannya didukung dengan aspek standar keamanan yang tinggi,
-                kenyamanan armada dan pelayanan, serta harga yang terjangkau</p>
-              <a href="#" class="btn btn-full">Tentang Kami</a>
-            </div>
-        </div>
-  
-      </div>
-    </section>
-    
-    <!-- akhir container -->
-  
-    <!-- Card -->
-    <section class="event">
-      <div class="container-fluid">
+
+<!-- Akhir Tentang Kami -->
+
+  <!-- Reservasi -->
+    <section class="tampilan">
+      <div class="container text-center">
         <div class="row">
-          <div class="col-lg-4">
-            <div class="event-teks">
-              <h2>RUTE</h2>
-              <hr>
-              <p>Bandung - Yogyakarta</p>
-              <p>Yogyakarta - Bandung</p>
-              <p>Harga: Rp.120.000 / Ticket</p>
-              <!-- <a href="#" class="btn btn-full">Check Event</a> -->
-            </div>
+          <div class="col-md-12">
+            <h3>TravelinKuy.id</h3>
           </div>
-          <br>
-          <div class="col-lg-8">
-            <div class="card-deck">
-
-              <div class="card">
-                <img src="img/q1.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Aman</h5>
-                  <p class="card-text">Standar keamanan terjaga, Perjalanan dengan supir profesional</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Travelin-Kuy</small>
-                </div>
-              </div>
-              
-              <div class="card">
-                <img src="img/q2.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Nyaman</h5>
-                  <p class="card-text">Kualitas armada yang baik</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Travelin-Kuy</small>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/q3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Terjangkau</h5>
-                  <p class="card-text">Nikmati harga yang terjangkau dengan kualitas super mewah</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Travelin-Kuy</small>
-                </div>
-              </div>
-            </div>
-          </div>
-  
         </div>
       </div>
     </section>
 
+    <section class="cards">
+      <div class="container">
+        <div class="row">
+          <div class="card" style="width: 500px; height: 350px">
+            <form action="login-check.php" method="POST">
+              <div class="form-group">
+                <label for="username">Nama Pelanggan    : </label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Masukan Nama Anda">
+              </div>
 
+              <div class="form-group">
+                <label for="control-label">Tanggal Berangkat : </label>
+                <input type="text" class="form-control" id="dtp" placeholder="Masukan Tanggal">                
+                <!-- <input type="password" class="form-control" id="password" name="password" placeholder="Password"> -->
+              </div>
+              <br>
+        
+
+              <button type="submit" class="btn btn-primary" name="login" value="Login">Reservasi</button>
+              <!-- <button type="submit" class="btn btn-primary">Masuk</button> -->
+            </form>
+            <!-- <a href="modules/daftar/daftar.php"  class="btn btn-success">Daftar</a> -->
+          </div>
+        </div>
+      </div>
+    </section> 
+    <br><hr>
+    <!-- Akhir Reservasi -->
 
     <section class="anotherevent">
       <div class="container">
@@ -262,12 +195,11 @@
                   <small class="text-muted">Travelin-Kuy</small>
                 </div>
               </div>
-              
             </div>
-            
           </div>
+
           <div class="text-center">
-           <a href="#" class="btn btn-full">Reservation Point</a> 
+           <a href="reservasi.php" class="btn btn-full">Reservation Point</a> 
           </div> 
       </div>
     </section>
@@ -288,12 +220,15 @@
         </div> 
        </div>
         <div class="text-center">
-          <a href="#" class="btn btn-full">Reservasi Sekarang</a> <!-- 
+          <a href="reservasi.php" class="btn btn-full">Reservasi Sekarang</a> <!-- 
           <a href="#" class="btn btn-half">Konsultasi Galang Dana</a> --> 
         </div>
       </div>
-    </section>
-    //<!-- Modal Logout -->
+    </section>  
+    <!-- Akhir Reservasi -->  
+
+
+    <!-- Modal Logout -->
                       <div class="modal fade" id="logout">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -311,8 +246,9 @@
                             </div>//<!-- /.modal-content -->
                         </div>//<!-- /.modal-dialog -->
                       </div>//<!-- /.modal -->
+    
 
-    <!-- footer -->
+     <!-- footer -->
     <footer>
       <div class="container">
         <div class="ulfoot border-bottom border-dark">
@@ -360,13 +296,7 @@
         <p> Copyright © Travelin.id, Inc. All Right Reserved.</p>
         </div>
     </footer>
-    
     <!-- akhir footer -->
-
-    <!-- <div class="alert alert-primary" role="alert">
-        A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-      </div> -->
-
 
 
     <!-- Optional JavaScript -->
@@ -375,5 +305,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="js/perusahaan.js"></script>
+    <script src="js/masuk.js"></script> 
+
+
   </body>
 </html>
