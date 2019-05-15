@@ -105,7 +105,7 @@
           <h2>Eksekutif <span>Travel</span></h2>
           <p>Nikmati Perjalanan Yang Menyenangkan Bersama Kami</p>
           <br>
-          <a href="#" class="btn btn-half">Reservasi Sekarang</a>
+          <a href="modules/pesan/view.php" class="btn btn-half">Reservasi Sekarang</a>
       </div>
     </div>
     <!-- akhir jumbotron -->
