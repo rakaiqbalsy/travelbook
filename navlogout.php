@@ -49,8 +49,12 @@
                           
                           <!-- Menu Footer-->
                           <li class="user-footer">
-                            <div class="pull-left">
+                            <!-- <div class="pull-left">
                               <a style="width:80px" href="?module=profil" class="btn btn-default btn-flat">Profil</a>
+                            </div> -->
+
+                            <div class="pull-left">
+                              <a style="width:80px" href="modules/history/view.php" class="btn btn-default btn-flat">History</a>
                             </div>
 
                             <div class="pull-right">

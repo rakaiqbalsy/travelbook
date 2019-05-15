@@ -58,48 +58,8 @@ if ($_GET['form']=='add') { ?>
                 <div class="col-sm-5">
                    <select class="form-control" name="nama_jurusan" required>
                     <option value=""></option>
-                    <option value="JOGJA-PURWOREJO ">JOGJA-PURWOREJO </option>
-                    <option value="JOGJA-KEBUMEN">JOGJA-KEBUMEN</option>
-                    <option value="JOGJA-WANGON">JOGJA-WANGON</option>
-                    <option value="JOGJA-KR.PCUNG">JOGJA-KR.PCUNG</option>
-                    <option value="JOGJA-MAJENANG ">JOGJA-MAJENANG </option>
-                    <option value="JOGJA-WANAREJA">JOGJA-WANAREJA</option>
-                    <option value="JOGJA-SIDAREJA/KW.ANTEN">JOGJA-SIDAREJA/KW.ANTEN</option>
-                    <option value="JOGJA- RAWAAPU/PATIMUAN/MINGGUAN">JOGJA- RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="JOGJA-XPCANG">JOGJA-XPCANG </option>
-                    <option value="JOGJA-PANGANDARAN">JOGJA-PANGANDARAN</option>
-                    <option value="WANGON-KR.PCUNG">WANGON-KR.PCUNG</option>
-                    <option value="WANGON-MAJENANG">WANGON-MAJENANG</option>
-                    <option value="WANGON-WANAREJA ">WANGON-WANAREJA </option>
-                    <option value="WANGON- SIDAREJA/KW.ANTEN">WANGON- SIDAREJA/KW.ANTEN</option>
-                    <option value="WANGON- RAWAAPU/PATIMUAN/MINGGUAN">WANGON- RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="WANGON-XPCANG">WANGON-XPCANG</option>
-                    <option value="WANGON-PANGANDARAN ">WANGON-PANGANDARAN </option>
-                    <option value="MAJENANG-WANAREJA">MAJENANG-WANAREJA</option>
-                    <option value="MAJENANG- KR.PCUNG">MAJENANG- KR.PCUNG</option>
-                    <option value="MAJENANG -WANGON">MAJENANG -WANGON</option>
-                    <option value="MAJENANG - KEBUMEN">MAJENANG - KEBUMEN </option>
-                    <option value="MAJENANG - PURWOREJO">MAJENANG - PURWOREJO</option>
-                    <option value="MAJENANG -JOGJA">MAJENANG -JOGJA</option>
-                    <option value="WANAREJA- MAJENANG ">WANAREJA- MAJENANG </option>
-                    <option value="WANAREJA-KR.PCUNG ">WANAREJA-KR.PCUNG </option>
-                    <option value="WANAREJA -WANGON">WANAREJA -WANGON</option>
-                    <option value="WANAREJA - KEBUMEN">WANAREJA - KEBUMEN</option>
-                    <option value="WANAREJA - PURWOREJO">WANAREJA - PURWOREJO</option>
-                    <option value="WANAREJA–JOGJA ">WANAREJA–JOGJA </option>
-                    <option value="SIDAREJA/KW.ANTEN-RAWAAPU/PATIMUAN/MINGGUAN">SIDAREJA/KW.ANTEN-RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="SIDAREJA/KW.ANTEN-XPCANG">SIDAREJA/KW.ANTEN-XPCANG</option>
-                    <option value="SIDAREJA/KW.ANTEN-PANGANDARAN">SIDAREJA/KW.ANTEN-PANGANDARAN</option>
-                    <option value="SIDAREJA/KW.ANTEN-WANGON">SIDAREJA/KW.ANTEN-WANGON </option>
-                    <option value="SIDAREJA/KW.ANTEN-KEBUMEN">SIDAREJA/KW.ANTEN-KEBUMEN</option>
-                    <option value="SIDAREJA/KW.ANTEN-PURWOREJO ">SIDAREJA/KW.ANTEN-PURWOREJO </option>
-                    <option value="SIDAREJA/KW.ANTEN-JOGJA">SIDAREJA/KW.ANTEN-JOGJA</option>
-                    <option value="PANGANDARAN- XPCANG">PANGANDARAN- XPCANG</option>
-                    <option value="PANGANDARAN - RAWAAPU/PATIMUAN/MINGGUAN">PANGANDARAN - RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="PANGANDARAN - SIDAREJA/KW.ANTEN ">PANGANDARAN - SIDAREJA/KW.ANTEN </option>
-                    <option value="PANGANDARAN - WANGON">PANGANDARAN - WANGON</option>
-                    <option value="PANGANDARAN - KEBUMEN">PANGANDARAN - KEBUMEN</option>
-                    <option value="PANGANDARAN - JOGJA">PANGANDARAN - JOGJA</option>
+                    <option value="Yogyakarta-Bandung ">Yogyakarta-Bandung</option>
+                    <option value="Bandung-Yogyakarta">Bandung-Yogyakarta</option>
                   </select>
                 </div>
               </div>
@@ -212,48 +172,8 @@ elseif ($_GET['form']=='edit') {
                 <div class="col-sm-5">
                   <select class="form-control" name="nama_jurusan" required>
                     <option value=""></option>
-                    <option value="JOGJA-PURWOREJO ">JOGJA-PURWOREJO </option>
-                    <option value="JOGJA-KEBUMEN">JOGJA-KEBUMEN</option>
-                    <option value="JOGJA-WANGON">JOGJA-WANGON</option>
-                    <option value="JOGJA-KR.PCUNG">JOGJA-KR.PCUNG</option>
-                    <option value="JOGJA-MAJENANG ">JOGJA-MAJENANG </option>
-                    <option value="JOGJA-WANAREJA">JOGJA-WANAREJA</option>
-                    <option value="JOGJA-SIDAREJA/KW.ANTEN">JOGJA-SIDAREJA/KW.ANTEN</option>
-                    <option value="JOGJA- RAWAAPU/PATIMUAN/MINGGUAN">JOGJA- RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="JOGJA-XPCANG">JOGJA-XPCANG </option>
-                    <option value="JOGJA-PANGANDARAN">JOGJA-PANGANDARAN</option>
-                    <option value="WANGON-KR.PCUNG">WANGON-KR.PCUNG</option>
-                    <option value="WANGON-MAJENANG">WANGON-MAJENANG</option>
-                    <option value="WANGON-WANAREJA ">WANGON-WANAREJA </option>
-                    <option value="WANGON- SIDAREJA/KW.ANTEN">WANGON- SIDAREJA/KW.ANTEN</option>
-                    <option value="WANGON- RAWAAPU/PATIMUAN/MINGGUAN">WANGON- RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="WANGON-XPCANG">WANGON-XPCANG</option>
-                    <option value="WANGON-PANGANDARAN ">WANGON-PANGANDARAN </option>
-                    <option value="MAJENANG-WANAREJA">MAJENANG-WANAREJA</option>
-                    <option value="MAJENANG- KR.PCUNG">MAJENANG- KR.PCUNG</option>
-                    <option value="MAJENANG -WANGON">MAJENANG -WANGON</option>
-                    <option value="MAJENANG - KEBUMEN">MAJENANG - KEBUMEN </option>
-                    <option value="MAJENANG - PURWOREJO">MAJENANG - PURWOREJO</option>
-                    <option value="MAJENANG -JOGJA">MAJENANG -JOGJA</option>
-                    <option value="WANAREJA- MAJENANG ">WANAREJA- MAJENANG </option>
-                    <option value="WANAREJA-KR.PCUNG ">WANAREJA-KR.PCUNG </option>
-                    <option value="WANAREJA -WANGON">WANAREJA -WANGON</option>
-                    <option value="WANAREJA - KEBUMEN">WANAREJA - KEBUMEN</option>
-                    <option value="WANAREJA - PURWOREJO">WANAREJA - PURWOREJO</option>
-                    <option value="WANAREJA–JOGJA ">WANAREJA–JOGJA </option>
-                    <option value="SIDAREJA/KW.ANTEN-RAWAAPU/PATIMUAN/MINGGUAN">SIDAREJA/KW.ANTEN-RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="SIDAREJA/KW.ANTEN-XPCANG">SIDAREJA/KW.ANTEN-XPCANG</option>
-                    <option value="SIDAREJA/KW.ANTEN-PANGANDARAN">SIDAREJA/KW.ANTEN-PANGANDARAN</option>
-                    <option value="SIDAREJA/KW.ANTEN-WANGON">SIDAREJA/KW.ANTEN-WANGON </option>
-                    <option value="SIDAREJA/KW.ANTEN-KEBUMEN">SIDAREJA/KW.ANTEN-KEBUMEN</option>
-                    <option value="SIDAREJA/KW.ANTEN-PURWOREJO ">SIDAREJA/KW.ANTEN-PURWOREJO </option>
-                    <option value="SIDAREJA/KW.ANTEN-JOGJA">SIDAREJA/KW.ANTEN-JOGJA</option>
-                    <option value="PANGANDARAN- XPCANG">PANGANDARAN- XPCANG</option>
-                    <option value="PANGANDARAN - RAWAAPU/PATIMUAN/MINGGUAN">PANGANDARAN - RAWAAPU/PATIMUAN/MINGGUAN</option>
-                    <option value="PANGANDARAN - SIDAREJA/KW.ANTEN ">PANGANDARAN - SIDAREJA/KW.ANTEN </option>
-                    <option value="PANGANDARAN - WANGON">PANGANDARAN - WANGON</option>
-                    <option value="PANGANDARAN - KEBUMEN">PANGANDARAN - KEBUMEN</option>
-                    <option value="PANGANDARAN - JOGJA">PANGANDARAN - JOGJA</option>
+                    <option value="Yogyakarta-Bandung ">Yogyakarta - Bandung </option>
+                    <option value="Bandung-Yogyakarta">Bandung - Yogyakarta</option>
                   </select>
                 </div>
               </div>

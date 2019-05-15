@@ -62,7 +62,7 @@
                 <th class="center">No.</th>
                 <th class="center">ID Pembelian</th>
                 <th class="center">Tgl Pembelian</th>
-                <th class="center">ID Pelanggan</th>
+                <th class="center">Nama User</th>
                 <th class="center">ID Jadwal</th>
                 <th class="center">Harga</th>
                 <th class="center">Jumlah Tiket</th>
@@ -77,8 +77,11 @@
             <?php  
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel pembelian
-            $query = mysqli_query($mysqli, "SELECT pembelian.id_pembelian, pembelian.tgl_pembelian, pembelian.id_jadwal, pembelian.harga, pembelian.jumlah_tiket, pembelian.subtotal, pembelian.tgl_berangkat, data_pelanggan.nama_pelanggan as id_pelanggan FROM pembelian JOIN data_pelanggan ON pembelian.id_pelanggan = data_pelanggan.id_pelanggan ORDER BY id_pembelian DESC")
-                                            or die('Ada kesalahan pada query tampil Data pembelian: '.mysqli_error($mysqli));
+
+            $query = mysqli_query($mysqli, "SELECT * FROM pembelian ORDER BY id_pembelian DESC") 
+                     or die ('Ada Kesalahan pada query tampil data pembelian');
+            // $query = mysqli_query($mysqli, "SELECT pembelian.id_pembelian, pembelian.tgl_pembelian, pembelian.id_jadwal, pembelian.harga, pembelian.jumlah_tiket, pembelian.subtotal, pembelian.tgl_berangkat, data_pelanggan.nama_pelanggan as id_pelanggan FROM pembelian JOIN data_pelanggan ON pembelian.id_pelanggan = data_pelanggan.id_pelanggan ORDER BY id_pembelian DESC")
+            //                                 or die('Ada kesalahan pada query tampil Data pembelian: '.mysqli_error($mysqli));
 
             // tampilkan data
             while ($data = mysqli_fetch_assoc($query)) { 
@@ -89,7 +92,7 @@
                       <td width='50' class='center'>$no</td>
                       <td width='150' class='center'>$data[id_pembelian]</td>
                       <td width='150' class='center'>$data[tgl_pembelian]</td>
-                      <td width='180'class='center'>$data[id_pelanggan]</td>
+                      <td width='180'class='center'>$data[nama_user]</td>
                       <td width='150' class='center'>$data[id_jadwal]</td>
                        <td width='150' class='center'>$data[harga]</td>
                         <td width='150' class='center'>$data[jumlah_tiket]</td>
@@ -106,7 +109,7 @@
                               <i style="color:#fff" class="glyphicon glyphicon-trash"></i>
                           </a>
 
-                          <a class="btn btn-primary btn-social pull-right" href="modules/pembelian/cetak.php" target="_blank">
+                          <a class="btn btn-primary btn-social pull-right" href="modules/pembelian/cetak.php?act=print&id=<?php echo $data['id_pembelian']; ?>" target="_blank">
                             <i class="fa fa-print"></i> Cetak
                           </a>
             <?php

@@ -65,7 +65,7 @@
                 <div class="navbar-nav ml-auto">
                   <a class="nav-item nav-link active" href="about.php">Tentang kami </a>
                   <a class="nav-item nav-link active" href="rute.php">Rute</a>
-                  <a class="nav-item nav-link active" href="reservasi.php">Reservasi</a>
+                  <a class="nav-item nav-link active" href="modules/pesan/view.php">Reservasi</a>
                   <!-- <a class="nav-item nav-link active" href="#">Bantuan</a> -->
                   <div class="garis"></div>
 

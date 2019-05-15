@@ -82,6 +82,10 @@ else {
 		include "modules/pembayaran/form.php";
 	}
 
+	elseif ($_GET['module'] == 'form_pembayaran2') {
+		include "modules/pembayaran/form2.php";
+	}
+
 	elseif ($_GET['module'] == 'pembatalan') {
 		include "modules/pembatalan/view.php";
 	}

@@ -13,7 +13,7 @@ $hari_ini = date("d-m-Y");
 
 $no = 1;
 // fungsi query untuk menampilkan data dari tabel pembelian
-$query = mysqli_query($mysqli, "SELECT id_pembelian,tgl_berangkat,nama_pelanggan,jumlah_tiket,subtotal FROM pembelian JOIN data_pelanggan ON pembelian.id_pelanggan=data_pelanggan.id_pelanggan")
+$query = mysqli_query($mysqli, "SELECT id_pembelian,tgl_berangkat,nama_user,jumlah_tiket,subtotal FROM pembelian")
                                 or die('Ada kesalahan pada query tampil Data PEMBELIAN: '.mysqli_error($mysqli));
 $count  = mysqli_num_rows($query);
 ?>
@@ -53,7 +53,7 @@ $count  = mysqli_num_rows($query);
                         <td width='100' height='13' align='center' valign='middle'>$no</td>
                         <td width='100' height='13' align='center' valign='middle'>$data[id_pembelian]</td>
                         <td width='100' height='13' align='center' valign='middle'>$data[tgl_berangkat]</td>
-                        <td width='100' height='13' align='center' valign='middle'>$data[nama_pelanggan]</td>
+                        <td width='100' height='13' align='center' valign='middle'>$data[nama_user]</td>
                         <td style='padding-left:5px;' width='100' height='13' valign='middle'>$data[jumlah_tiket]</td>
                         <td style='padding-left:5px;' width='100' height='13' valign='middle'>$data[subtotal]</td>
                     </tr>";
@@ -71,7 +71,7 @@ $count  = mysqli_num_rows($query);
             </div>
             
             <div id="footer-nama">
-                Nina Iqbal Arrasyid
+                Raka Iqbal Sy
             </div>
         </div>
     </body>

@@ -55,17 +55,17 @@
                   $id_pelanggan = "PLG-$buat_id";
               ?>
 
-                <div class="wrap-input100 validate-input">
-                      <input class="input100"type="text" class="form-control" name="id_pelanggan" value="<?php echo $id_pelanggan; ?>" readonly required>
+<!--                 <div class="wrap-input100 validate-input">
+                      <input class="input100"type="text" class="form-control" name="id_pelanggan" value="<?php //echo $id_pelanggan; ?>" readonly required>
                       <span class="focus-input100"></span>
                       <span class="symbol-input100">
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                 </span>
-                </div>
+                </div> -->
 
               <div class="form-group">
                 <label for="namaLengkap">Nama Lengkap : </label>
-                <input class="form-control" id="namaLengkap" type="text" name="nama_pelanggan" placeholder="Nama Lengkap">
+                <input class="form-control" id="nama_pelanggan" type="text" name="nama_pelanggan" placeholder="Nama Lengkap">
               </div>
 
 

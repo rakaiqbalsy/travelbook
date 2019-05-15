@@ -94,7 +94,7 @@
                      
                       <td class='center' width='100'>
                         <div>
-                          <a data-toggle='tooltip' data-placement='top' title='Ubah' style='margin-right:5px' class='btn btn-primary btn-sm' href='?module=form_pembayaran&form=edit&id=$data[id_pembayaran]'>
+                          <a data-toggle='tooltip' data-placement='top' title='Ubah' style='margin-right:5px' class='btn btn-primary btn-sm' href='?module=form_pembayaran2&form2=edit&id=$data[id_pembayaran]'>
                               <i style='color:#fff' class='glyphicon glyphicon-edit'></i>
                           </a>";
             ?>
@@ -102,7 +102,7 @@
                               <i style="color:#fff" class="glyphicon glyphicon-trash"></i>
                           </a>
 
-                           <a class="btn btn-primary btn-social pull-right" href="modules/pembayaran/cetak.php" target="_blank">
+                           <a class="btn btn-primary btn-social pull-right" href="modules/pembayaran/cetak.php?act=print&id=<?php echo $data['id_pembayaran']; ?>" target="_blank">
                             <i class="fa fa-print"></i> Cetak
                           </a>
             <?php

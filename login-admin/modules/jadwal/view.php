@@ -74,7 +74,7 @@
             <?php  
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel jadwal
-            $query = mysqli_query($mysqli, "SELECT * FROM jadwal ORDER BY id_jadwal DESC")
+            $query = mysqli_query($mysqli, "SELECT * FROM jadwal ORDER BY id_jadwal ASC")
                                             or die('Ada kesalahan pada query tampil Data jadwal: '.mysqli_error($mysqli));
 
             // tampilkan data

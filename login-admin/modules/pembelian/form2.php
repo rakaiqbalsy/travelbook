@@ -42,7 +42,7 @@ if ($_GET['form2']=='edit') {
               <label class="col-sm-2 control-label">ID Pelanggan</label>
               <div class="col-sm-5">
                 <select class="chosen-select" name="id_pelanggan" data-placeholder="-- Pilih Pelanggan --" onchange="tampil_pelanggan(this)" autocomplete="off" required>
-                  <option value="<?php echo $data['id_pelanggan'] ?>"></option>
+                  <option value="<?php echo $data['nama_pelanggan'] ?>"></option>
                   <?php
                   $query_pelanggan = mysqli_query($mysqli, "SELECT id_pelanggan, nama_pelanggan FROM data_pelanggan ORDER BY nama_pelanggan ASC")
                   or die('Ada kesalahan pada query tampil pelanggan: '.mysqli_error($mysqli));
@@ -88,7 +88,7 @@ if ($_GET['form2']=='edit') {
             <div class="form-group">
               <label class="col-sm-2 control-label">Jumlah Tiket</label>
               <div class="col-sm-5" id="jumlah_tiket_div">
-                <input type="number" class="form-control" id="jumlah_tiket"  name="jumlah_tiket" required data-max="0" value="<?php echo $data['jumlah_tiket'] ?>">
+                <input type="number" class="form-control" id="jumlah_tiket"  name="jumlah_tiket" required data-max="8" value="<?php echo $data['jumlah_tiket'] ?>">
               </div>
             </div>
 

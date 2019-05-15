@@ -69,12 +69,12 @@ if ($_GET['form']=='add') { ?>
               <label class="col-sm-2 control-label">ID Pembelian</label>
               <div class="col-sm-5">
                 <select class="chosen-select" id="id_pembelian" name="id_pembelian" data-placeholder="-- Pilih Pembelian --"  autocomplete="off" required>
-                  <option value=""></option>
+                  <!-- <option value=""></option> -->
                   <?php
                   $query_pembelian = mysqli_query($mysqli, "SELECT * FROM pembelian ORDER BY id_pembelian ASC")
                   or die('Ada kesalahan pada query tampil pembelian: '.mysqli_error($mysqli));
                   while ($data_pembelian = mysqli_fetch_assoc($query_pembelian)) {
-                  echo"<option value=\"$data_pembelian[id_pembelian]\"> $data_pembelian[id_pembelian] | $data_pembelian[id_pelanggan] </option>";
+                  echo"<option value=\"$data_pembelian[id_pembelian]\"> $data_pembelian[id_pembelian]</option>";
                   }
                   ?>
                 </select>

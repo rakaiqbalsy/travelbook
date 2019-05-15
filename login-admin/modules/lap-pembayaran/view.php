@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <i class="fa fa-file-text-o icon-title"></i> Laporan Pembayaran Tiket Estu Trans Travel
+    <i class="fa fa-file-text-o icon-title"></i> Laporan Pembayaran Tiket Travelin
 
     <a class="btn btn-primary btn-social pull-right" href="modules/lap-pembayaran/cetak.php" target="_blank">
       <i class="fa fa-print"></i> Cetak

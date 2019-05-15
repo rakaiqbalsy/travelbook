@@ -54,7 +54,7 @@ if ($_GET['form']=='add') { ?>
               <label class="col-sm-2 control-label">ID Pelanggan</label>
               <div class="col-sm-5">
                 <select class="chosen-select" name="id_pelanggan" data-placeholder="-- Pilih Pelanggan --" onchange="tampil_pelanggan(this)" autocomplete="off" required>
-                  <option value="<?php echo $data['id_pelanggan'] ?>"></option>
+                  <option value="<?php echo $data['nama_pelanggan'] ?>"></option>
                   <?php
                   $query_pelanggan = mysqli_query($mysqli, "SELECT id_pelanggan, nama_pelanggan FROM data_pelanggan ORDER BY nama_pelanggan ASC")
                   or die('Ada kesalahan pada query tampil pelanggan: '.mysqli_error($mysqli));

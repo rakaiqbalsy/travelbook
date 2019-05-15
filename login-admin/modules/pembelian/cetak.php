@@ -9,11 +9,12 @@ include "../../config/fungsi_tanggal.php";
 // panggil fungsi untuk format rupiah
 include "../../config/fungsi_rupiah.php";
 
+
 $hari_ini = date("d-m-Y");
 
 $no = 1;
-// fungsi query untuk menampilkan data dari tabel obat
-$query = mysqli_query($mysqli, "SELECT * FROM pembelian ORDER BY id_pembelian DESC")
+// fungsi query untuk menampilkan data dari tabel pembelian
+$query = mysqli_query($mysqli, "SELECT * FROM pembelian WHERE id_pembelian = '$_GET[id]' ORDER BY id_pembelian DESC")
                                 or die('Ada kesalahan pada query tampil Data Pembelian: '.mysqli_error($mysqli));
 $count  = mysqli_num_rows($query);
 ?>
@@ -38,7 +39,7 @@ $count  = mysqli_num_rows($query);
                         <th height="20" align="center" valign="middle">NO.</th>
                         <th height="25" align="center" valign="middle">ID Pembelian</th>
                         <th height="25" align="center" valign="middle">Tgl Transaksi</th>
-                        <th height="25" align="center" valign="middle">ID Pelanggan</th>
+                        <th height="25" align="center" valign="middle">Nama Pelanggan</th>
                         <th height="25" align="center" valign="middle">ID Jadwal</th>
                         <th height="25" align="center" valign="middle">Harga</th>
                         <th height="25" align="center" valign="middle">Jumlah Tiket</th>
@@ -57,8 +58,8 @@ $count  = mysqli_num_rows($query);
             echo "  <tr>
                         <td width='75' height='13' align='center' valign='middle'>$no</td>
                         <td width='75' height='13' align='center' valign='middle'>$data[id_pembelian]</td>
-                        <td style='padding-left:5px;' width='75' height='13' valign='middle'>$data[tgl_transaksi]</td>
-                        <td width='75' height='13' align='center' valign='middle'>$data[id_pelanggan]</td>
+                        <td style='padding-left:5px;' width='75' height='13' valign='middle'>$data[tgl_pembelian]</td>
+                        <td width='75' height='13' align='center' valign='middle'>$data[nama_user]</td>
                         <td width='75' height='13' align='center' valign='middle'>$data[id_jadwal]</td>
                         <td width='75' height='13' align='center' valign='middle'>$data[harga]</td>
                         <td width='75' height='13' align='center' valign='middle'>$data[jumlah_tiket]</td>
@@ -71,14 +72,14 @@ $count  = mysqli_num_rows($query);
             </table>
 
             <div id="footer-tanggal">
-                Yogyakarta, <?php echo tgl_eng_to_ind("$hari_ini"); ?>
+                Bandung, <?php echo tgl_eng_to_ind("$hari_ini"); ?>
             </div>
             <div id="footer-jabatan">
                 Pimpinan
             </div>
             
             <div id="footer-nama">
-                AAAAAAAAA
+                RAKA IQBAL SY
             </div>
         </div>
     </body>

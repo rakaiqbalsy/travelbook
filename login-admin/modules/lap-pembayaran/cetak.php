@@ -65,14 +65,14 @@ $count  = mysqli_num_rows($query);
             </table>
 
             <div id="footer-tanggal">
-                Yogyakarta, <?php echo tgl_eng_to_ind("$hari_ini"); ?>
+                Bandung, <?php echo tgl_eng_to_ind("$hari_ini"); ?>
             </div>
             <div id="footer-jabatan">
                 Pimpinan
             </div>
             
             <div id="footer-nama">
-                AAAAAAAAAAAAAAAA
+                Raka Iqbal Sy
             </div>
         </div>
     </body>

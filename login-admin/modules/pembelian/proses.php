@@ -38,7 +38,7 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])){
             // perintah query untuk menyimpan data ke tabel pembelian
             //print_r($query);
 
-            $query = mysqli_query($mysqli, "INSERT INTO pembelian(id_pembelian,id_pelanggan,tgl_pembelian,id_jadwal,harga,jumlah_tiket,subtotal,tgl_berangkat)
+            $query = mysqli_query($mysqli, "INSERT INTO pembelian(id_pembelian,nama_user,tgl_pembelian,id_jadwal,harga,jumlah_tiket,subtotal,tgl_berangkat)
                 VALUES ('$id_pembelian','$id_pelanggan','$tgl_pembelian','$id_jadwal','$harga','$jumlah_tiket','$subtotal','$tgl_berangkat')")
                 or die('Ada kesalahan pada query insert : '.mysqli_error($mysqli));
 
@@ -69,12 +69,12 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])){
 
                 // perintah query untuk mengubah data pada tabel pembelian
                 $query = mysqli_query($mysqli, "UPDATE pembelian SET  id_pembelian        = '$id_pembelian',
-                                                                    id_pelanggan                = '$id_pelanggan',
+                                                                    nama_user                = '$id_pelanggan',
                                                                     tgl_pembelian                = '$tgl_pembelian',
                                                                     id_jadwal                    = '$id_jadwal',
                                                                     harga                       = '$harga',
                                                                      jumlah_tiket                = '$jumlah_tiket',
-                                                                      subtotal                = '$tgl_berangkat',
+                                                                      subtotal                = '$subtotal',
                                                                     tgl_berangkat                = '$tgl_berangkat'
                                                               WHERE id_pembelian                = '$id_pembelian'")
                                                 or die('Ada kesalahan pada query update : '.mysqli_error($mysqli));
