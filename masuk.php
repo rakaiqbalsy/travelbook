@@ -69,20 +69,21 @@
                 <label for="password">Password : </label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
               </div>
-<<<<<<< HEAD
-              <button type="submit" class="btn btn-primary" name="login" value="Login">Login</button>
-=======
-              <button type="submit" class="btn btn-primary">Masuk</button>
->>>>>>> ae4739e45ed2473b4429b7d7b16efb379261b49b
+              <br>
+<!-- <<<<<<< HEAD -->
+              <button type="submit" class="btn btn-primary" name="login" value="Login">Masuk</button>
+<!-- ======= -->
+              <!-- <button type="submit" class="btn btn-primary">Masuk</button> -->
+<!-- >>>>>>> ae4739e45ed2473b4429b7d7b16efb379261b49b -->
             </form>
+            <hr>
             <a href="modules/daftar/daftar.php"  class="btn btn-success">Daftar</a>
+            <br>
           </div>
         </div>
       </div>
     </section>     
     
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
